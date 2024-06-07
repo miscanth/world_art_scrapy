@@ -17,6 +17,11 @@ class Title(Base):
     link = Column(String())
     chat = Column(Integer())
 
+    def __str__(self):
+        # При вызове функции print()
+        # будут выводиться значение поля name.
+        return f'{self.name}'
+
 
 class AnimePipeline:
     def open_spider(self, spider):
