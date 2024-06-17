@@ -51,5 +51,6 @@ class AnimeSpider(scrapy.Spider):
                     'genre': genre,
                     'link': self.start_urls[0] + link,
                     'chat': chat,
+                    'image_link': 'test_image_link'
                 }
                 yield AnimeItem(data)

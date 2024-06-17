@@ -16,6 +16,7 @@ class Title(Base):
     genre = Column(String(400))
     link = Column(String())
     chat = Column(Integer())
+    image_link = Column(String())
 
     def __str__(self):
         # При вызове функции print()
@@ -40,6 +41,7 @@ class AnimePipeline:
             genre=', '.join(item['genre']),
             link=item['link'],
             chat=item['chat'],
+            image_link=item['image_link']
         )
         # Добавление объекта в сессию и коммит сессии.
         self.session.add(title)
