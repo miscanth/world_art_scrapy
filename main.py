@@ -33,14 +33,11 @@ def main():
     engine = create_engine('sqlite:///sqlite.db', echo=False)
     session = Session(engine)
 
-    all_titles = session.query(Title.name).all()[:5:]
-    #first_title = str(session.query(Title).first())
-    #message = [i.name for i in all_titles]
-    # send_message(bot, message)
+    all_titles = session.query(Title.name, Title.image_link).all()[:10:]
+    
     for title in all_titles:
         send_message(bot, str(title[0]))
-    # send_message(bot, first_title)
-    # print(message)
+        send_message(bot, str(title[1]))
 
 
 if __name__ == '__main__':
