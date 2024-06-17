@@ -6,6 +6,9 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import os
+from pathlib import Path
+
 
 BOT_NAME = "world_art"
 
@@ -103,3 +106,7 @@ FEEDS = {
 ITEM_PIPELINES = {
     'world_art.pipelines.AnimePipeline': 300,
 } 
+
+"""BASE_DIR = Path(__file__).resolve().parent.parent
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')"""

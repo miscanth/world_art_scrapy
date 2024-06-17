@@ -13,3 +13,4 @@ class AnimeItem(scrapy.Item):
     genre = scrapy.Field()
     link = scrapy.Field()
     chat = scrapy.Field()
+    image_link = scrapy.Field()
